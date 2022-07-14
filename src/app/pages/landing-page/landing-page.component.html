@@ -1,0 +1,176 @@
+<!-- banner section  -->
+<div class="home_banner_outer">
+  <div class="corner corner1">
+    <img src="assets/images/corner1.png" alt="cornerIcon"/>
+  </div>
+  <div class="corner corner2">
+    <img src="assets/images/corner2.png" alt="cornerIcon"/>
+  </div>
+  <div class="corner corner3">
+    <img src="assets/images/corner3.png" alt="cornerIcon"/>
+  </div>
+  <div class="home_banner_inner">
+    <div class="container">
+      <div class="row justify-content-end">        
+        <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12">
+          <div class="banner_text">
+            <h1>Mendleson
+              Communication
+              and Engagement</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sed ipsum, ut quam volutpat, tortor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- about section   -->
+<div  class="about_section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 mb-lg-0 mb-4">
+        <img  src="assets/images/aboutus.png" class="img-fluid about_img" alt="about">
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="about_text_outer">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="heading_with_undurline">ABOUT US</h2>
+              <p class="mb-40">We love what we do and are driven by achieving great results for our clients. Our awards and impressive client list are testament to our high quality approach. We deliver value, creaKvity, results and excepKonal levels of customer service and professionalism. We specialise in infrastructure development, energy and natural resources.</p>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="about_icon_text">
+                <img src="assets/images/Enagagement-icon.png" alt="comunication-icon"/>
+                <h3>Engagement</h3>
+                <p>We are engagement specialists, who have led projects at all levels of the IAP2 spectrum.
+                  READ MORE</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="about_icon_text">
+                <img src="assets/images/comunication-icon.png" alt="comunication-icon"/>
+                <h3>Communications</h3>
+                <p>We are award-winning leaders in communications and campaign management.
+                  READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- service section   -->
+<div class="service_section" id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="heading_with_undurline">Services</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-10 col-lg-12">
+        <div class="services_rows">
+          <div class="row align-items-center" *ngFor="let serviceinfo of services">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="service_image">
+                <img src={{serviceinfo.imgPath}} class="img-fluid" alt="about">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="services_text">
+                <h3>{{serviceinfo.heading}}</h3>
+                <p>{{serviceinfo.details}}</p>
+              </div>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </div>
+        
+  </div>
+</div>
+
+<div class="bg_div">
+  <!-- team section  -->
+  <div class="team_section" id="team">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="heading_with_undurline">Our team</h2>
+      </div>
+      <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig"       
+        >
+        <div ngxSlickItem *ngFor="let team of teams" class="slide">
+          <img src="{{team.image}}" alt="team member" class="img-fluid mx-auto">
+          <p class="team_member_name">{{team.name}}</p>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
+
+  <!-- our project section  -->
+  <div class="project_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="heading_with_undurline">Our projects</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-md-0 mb-4">
+              <div class="project_div h-100">
+                <img src="assets/images/Project2.png" alt="project" class="img-fluid">
+                <div class="overlay">  
+                  <span>project<br/>name</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="project_div mb-4">
+                <img src="assets/images/Project2.png" alt="project" class="img-fluid">
+                <div class="overlay">  
+                  <span>project<br/>name</span>
+                </div>
+              </div>
+              <div class="project_div">
+                <img src="assets/images/Project3.png" alt="project" class="img-fluid">
+                <div class="overlay">  
+                  <span>project<br/>name</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- our client section  -->
+<div class="client_section" id="client">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="heading_with_undurline">Our clients</h2>
+      </div>      
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-10 col-lg-12">
+        <div class="client_outer">
+          <div class="client_logo" *ngFor="let logo of logos">
+            <img src={{logo.image}} alt="logo" class="img-fluid">
+            <img src={{logo.hover}} alt="logo" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

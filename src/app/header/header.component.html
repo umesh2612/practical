@@ -1,0 +1,33 @@
+<div class="main_header"  [ngClass]="{ bgWhite: scrolled}" >
+  <div class="container">
+    <nav class="navbar navbar-expand-md">      
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="logo">        
+      </a>
+          
+      <button (click)="clickEvent()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i [ngClass]="status ? 'fa-times' : 'fa-bars'" class="fa" aria-hidden="true"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="collapsibleNavbar" [ngClass]="status ? 'show' : ''">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#client">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

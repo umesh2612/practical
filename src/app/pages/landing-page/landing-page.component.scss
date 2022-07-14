@@ -1,0 +1,469 @@
+// banner section 
+.home_banner_outer{
+  position: relative;
+  overflow: hidden;
+  .corner{
+    position: absolute; 
+       
+    &.corner1{
+      left: 0;
+      top: 0;
+      animation: zoomInOut1 2s ease-in 2s infinite alternate;
+    }
+    &.corner2{
+      right: 0;
+      top: 0;
+      animation: zoomInOut2 3s ease-in 1.5s infinite alternate;
+    }
+    &.corner3{
+      right: 0;
+      bottom: 0;
+      animation: zoomInOut3 1s ease-in 1s infinite alternate;
+    }
+  }
+  .home_banner_inner{    
+    background-image: url(../../../assets/images/banner.png);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: 50%; 
+    .banner_text{
+      padding: 282px 10px 338px 125px;
+      h1{
+        font-weight: 500;
+        font-size: 56px;
+        line-height: 66px;
+        color: #000;
+        margin-bottom: 25px;
+      }
+      p{        
+        font-size: 18px;
+        line-height: 21px;
+        color: #2C2C2C;
+        margin: 0;
+      }
+    }  
+  }
+}
+
+@keyframes zoomInOut1 {
+  from {transform: scale(1);}
+  to {transform: scale(1.2);}
+}
+@keyframes zoomInOut2 {
+  from {transform: scale(1);}
+  to {transform: scale(1.2);}
+}
+@keyframes zoomInOut3 {
+  from {transform: scale(1);}
+  to {transform: scale(1.2);}
+}
+
+// about section 
+.about_section{
+  padding: 77px 0 20px 0;
+  .about_img{
+    margin-top: 90px;
+  }
+  .about_text_outer{
+    p{
+      line-height: 27px;
+    }
+    .heading_with_undurline{
+      margin-bottom: 21px;
+    }
+    .about_icon_text{
+      margin-top: 40px;
+      h3{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin: 25px 0 15px 0;
+      }
+    }
+  }
+ 
+}
+// service section 
+.service_section{
+  padding: 85px 0 80px 0;
+  background-image: url(../../../assets/images/s1.png),url(../../../assets/images/s2.png),url(../../../assets/images/s3.png),url(../../../assets/images/s4.png);
+  background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+  background-position: left -10px top,right -75px top 35%,left -45px top 60%,right -75px bottom 15%;  
+  .heading_with_undurline{
+    margin-bottom: 50px;
+  }
+  .services_rows{
+    >div:not(:last-child)
+    {
+      margin-bottom: 60px;
+    }
+    .row{      
+      .services_text{
+        h3{
+          font-weight: 500;
+          font-size: 42px;
+          line-height: 50px;
+          text-transform: uppercase;
+          color: #2C2C2C;
+          margin-bottom: 20px;
+        }
+      }      
+      &:nth-child(odd){
+        div{
+          &:first-child{
+            order: 2;
+            .service_image{
+              padding-left: 30px;
+            }
+          }
+          &:last-child{            
+            .services_text{
+              text-align: right;
+              padding-right: 30px;
+              p{
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+          }
+        }                
+      }
+      &:nth-child(even){
+        div{
+          &:first-child{
+            
+            .service_image{
+              padding-right: 30px;
+              text-align: right;
+            }            
+          }
+          &:last-child{
+            .services_text{
+              padding-left: 30px;
+              p{
+                font-size: 18px;
+                line-height: 27px;
+              }
+            }
+          }
+        }
+      }
+    }        
+  }
+}
+
+// bg div 
+.bg_div{
+  background-image: url(../../../assets/images/t1.png),url(../../../assets/images/t2.png);
+  background-repeat: no-repeat,no-repeat;
+  background-position: left -150px top ,right -135px top 350px;  
+}
+// team slider 
+.team_section{
+  padding: 100px 0 40px 0;  
+  .heading_with_undurline{
+    margin-bottom: 30px;
+  }
+  .team_member_name{
+    text-align: center;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000;
+    margin-top: 53px;
+    margin-bottom: 0;
+  }
+}
+
+
+// project section 
+.project_section{
+  padding: 80px 0 50px 0;
+  .heading_with_undurline{
+    margin-bottom: 30px;
+  }
+  .project_div{
+    position: relative;
+    >img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover{
+      .overlay{
+        height: 100%;
+        opacity: 1;
+        transition: height 0.2s ease-in;
+        span{
+          display: block;
+          opacity: 1;          
+          transition: opacity 0.2s ease-in;
+        }
+      }
+    }
+    .overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 0;
+      transition-duration: 0.2s;
+      background-color: rgba(6, 6, 114, 0.7);
+      opacity: 0;
+      display: flex;
+      align-items: flex-end;      
+      span{
+        opacity: 0;      
+        transition-duration: 0.2s;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 0 100px 50px;
+        font-size: 42px;
+        line-height: 45px;
+        font-weight: 500;    
+        display: none;            
+      }
+    }
+  }
+}
+
+// client section 
+.client_section{
+  padding: 78px 0 10px 0;
+  .heading_with_undurline{
+    margin-bottom: 40px;
+  }
+  .client_outer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .client_logo{
+      flex-basis: 20%;
+      margin-bottom: 70px;
+      img{
+        &:last-child{
+          display: none;
+        }
+      }
+      &:hover{
+        img{
+          &:last-child{
+            display: block;
+          }
+          &:first-child{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive 
+@media(max-width:992px){
+  .home_banner_outer{
+    .home_banner_inner{
+      .banner_text{
+        padding: 200px 10px 270px 70px;
+      }
+    }
+  }
+  .about_section{
+    .about_img{      
+      margin: 0 auto;
+      display: block;
+    }
+  }  
+  .service_section{        
+    .services_rows{      
+      .row{      
+        .services_text{
+          h3{            
+            font-size: 38px;
+            line-height: 44px;            
+          }
+        }      
+        &:nth-child(odd){
+          div{
+            &:first-child{
+              order: 2;
+              .service_image{
+                padding-left: 0;
+              }
+            }
+            &:last-child{            
+              .services_text{
+                text-align: right;
+                padding-right: 0;                
+              }
+            }
+          }                
+        }
+        &:nth-child(even){
+          div{
+            &:first-child{              
+              .service_image{
+                padding-right: 0;                
+              }            
+            }
+            &:last-child{
+              .services_text{
+                padding-left: 0;               
+              }
+            }
+          }
+        }
+      }        
+    }
+  }
+  .client_section{
+    .client_outer{
+      .client_logo{
+        flex-basis: 30%;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media(max-width:768px){
+  .home_banner_outer{
+    .corner.corner1{
+      img{
+        height: 100px;
+      }
+    }
+    .corner.corner2{
+      img{
+        height: 200px;
+      }
+    }
+    .corner.corner3{
+      img{
+        height: 100px;
+      }
+    }
+    .home_banner_inner{
+      .banner_text{
+        padding: 150px 0 230px 0;
+        h1{
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+    }
+  } 
+  .service_section{        
+    .services_rows{    
+      >div{
+        margin-bottom: 0 !important;
+      }  
+      .row{      
+        .services_text{
+          h3{            
+            font-size: 38px;
+            line-height: 44px;            
+          }
+        }      
+        &:nth-child(odd){
+          div{
+            &:first-child{
+              order: initial;
+              .service_image{
+                padding-left: 0;
+                text-align: center;
+              }
+            }
+            &:last-child{            
+              .services_text{
+                text-align: left;   
+                margin-bottom: 40px;  
+                margin-top: 20px;                           
+              }
+            }
+          }                
+        }
+        &:nth-child(even){
+          div{
+            &:first-child{              
+              .service_image{
+                padding-right: 0;   
+                text-align: center;             
+              }            
+            }
+            &:last-child{
+              .services_text{
+                padding-left: 0;  
+                margin-bottom: 50px;  
+                margin-top: 20px;             
+              }
+            }
+          }
+        }
+      }        
+    }
+  }
+}
+
+@media(max-width:580px){
+  .home_banner_outer{    
+    .home_banner_inner{
+      background-size: 75%;
+      .banner_text{
+        padding: 150px 0 250px 0;
+        h1{
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+  .about_section{
+    padding: 45px 0 20px 0;
+  }
+  .service_section{
+    background-image: none;
+    padding: 50px 0 0 0;
+    .services_text{
+      h3{            
+        font-size: 30px !important;
+        line-height: 33px !important;
+        margin-bottom: 5px !important;            
+      }
+    } 
+  }
+  .bg_div{
+    background: none;
+  }
+  .team_section{
+    padding: 50px 0 0 0;
+    margin-top: -15px;
+    .team_member_name{
+      margin-top: 25px;
+    }
+  }
+  .project_section{
+    padding: 50px 0 20px 0;
+    .project_div{
+      .overlay{
+        span{
+          font-size: 22px;
+          line-height: 29px;
+          padding: 0 0 48px 40px;
+        }
+      }
+    }
+  }
+  .client_section{
+    padding: 50px 0 10px 0;
+    .client_outer{
+      .client_logo{
+        flex-basis:28%;   
+        margin-bottom: 25px;     
+      }
+    }
+  }
+}
+
